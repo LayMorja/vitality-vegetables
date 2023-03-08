@@ -5,3 +5,4 @@ package-lock.json
 *.rar
 *.zip
 config/version.json
+.gitignore
