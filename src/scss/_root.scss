@@ -10,3 +10,9 @@
   --clr-green: #00923a;
   --clr-orange-light: #ffc083;
 }
+//== 768px ==//
+@media (max-width: $mb) {
+  :root {
+    --header-height: 6.625rem;
+  }
+}

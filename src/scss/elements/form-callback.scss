@@ -1,8 +1,22 @@
 .form-callback {
   @extend %fl-r-ct;
+  @media (max-width: em(599.98)) {
+    flex-direction: column;
+    max-width: rem(320);
+    margin: 0 auto;
+  }
   &__item {
     flex-grow: 1;
     margin-right: rem(45);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      margin-right: rem(20);
+    }
+    @media (max-width: em(599.98)) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: rem(20);
+    }
   }
 
   &__input {
@@ -20,6 +34,9 @@
 
     &:hover:not(:focus) {
       box-shadow: inset 0 -8px 0 -2px var(--clr-green), 2px 2px 15px rgba(0, 100, 40, 0.16);
+    }
+    @media (max-width: em(599.98)) {
+      text-align: center;
     }
   }
 
@@ -53,6 +70,10 @@
           color: var(--clr-green);
         }
       }
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      width: 100%;
     }
   }
   &__submit span {

@@ -2,6 +2,10 @@
   padding: rem(70) 0 rem(60);
   @extend %bg-cov;
   background-position: center 20%;
+  //== 440px ==//
+  @media (max-width: $mb-s) {
+    padding: rem(40) 0 rem(30);
+  }
 
   &__container {
     position: relative;
@@ -16,28 +20,83 @@
     height: rem(337);
     @extend %bg-con;
     background-image: url('@temp/order/image.png');
+    //== 992px ==//
+    @media (max-width: $tb) {
+      display: none;
+    }
+  }
+
+  &__title {
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      font-size: rem(24);
+    }
   }
 
   &__title:not(:last-child) {
     margin-bottom: rem(35);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-bottom: rem(30);
+    }
   }
 
   &__text {
     max-width: rem(830);
     font-size: rem(18);
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      font-size: rem(16);
+    }
   }
   &__text:not(:last-child) {
     margin-bottom: rem(85);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      margin-bottom: rem(40);
+    }
   }
   &__text p:not(:last-child) {
     margin-bottom: rem(15);
   }
 
   &__row {
-    display: flex;
+    @extend %fl-r-ct;
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    display: none;
+    //== 992px ==//
+    @media (max-width: $tb) {
+      display: block;
+      padding-left: rem(20);
+    }
+    //== 370px ==//
+    @media (max-width: $mb-xs) {
+      display: none;
+    }
+  }
+  &__image img {
+    max-width: 100%;
   }
 
   &__benefits {
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      &:not(:last-child) {
+        margin-bottom: rem(40);
+      }
+    }
+    //== 370px ==//
+    @media (max-width: $mb-xs) {
+      &:not(:last-child) {
+        margin-bottom: rem(0);
+      }
+    }
   }
 
   &__benefit {
@@ -46,6 +105,10 @@
   }
   &__benefit:not(:last-child) {
     margin-bottom: rem(40);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-bottom: rem(20);
+    }
   }
   &__benefit div {
     text-align: center;
@@ -53,11 +116,25 @@
     &:not(:last-child) {
       margin-right: rem(15);
     }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      flex: 0 0 rem(80);
+    }
   }
   &__benefit img {
     display: block;
+    max-width: 100%;
+    object-fit: contain;
   }
   &__benefit span {
     font-size: rem(27);
+    //== 992px ==//
+    @media (max-width: $tb) {
+      font-size: rem(20);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      max-width: rem(320);
+    }
   }
 }

@@ -3,14 +3,13 @@
   @extend %fl-c;
   position: relative;
   color: var(--clr-white);
-  @media (any-hover: hover) {
-    &:hover {
-      .faq-card__image::before {
-        opacity: 0.7;
-      }
-      .faq-card__hide-content {
-        transform: scale(1) translateY(0);
-      }
+  &:hover,
+  &.faq-card--active {
+    .faq-card__image::before {
+      opacity: 0.7;
+    }
+    .faq-card__hide-content {
+      transform: scale(1) translateY(0);
     }
   }
 
@@ -38,6 +37,10 @@
     background-color: var(--clr-green);
     font-weight: 600;
     text-transform: uppercase;
+    //== 370px ==//
+    @media (max-width: $mb-xs) {
+      font-size: rem(15);
+    }
   }
 
   &__hide-content {
@@ -51,5 +54,18 @@
     transform: scale(0) translateY(20%);
     font-size: rem(24);
     transition: transform 0.32s ease-in-out;
+    @media (max-width: $pc) {
+      max-height: rem(327);
+      font-size: rem(20);
+    }
+    //== 992px ==//
+    @media (max-width: $tb) {
+      max-height: rem(380);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding: rem(30) rem(20);
+      font-size: rem(18);
+    }
   }
 }

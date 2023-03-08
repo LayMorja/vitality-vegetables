@@ -75,12 +75,23 @@ body::after {
 .popup {
   &__content {
     padding: rem(40) rem(45);
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      padding: rem(30) rem(25);
+    }
+    @media (max-width: em(359.98)) {
+      padding: rem(30) rem(15);
+    }
   }
 
   &__title {
     font-weight: 600;
     font-size: rem(36);
     text-align: center;
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      font-size: rem(30);
+    }
   }
   &__title:not(:last-child) {
     margin-bottom: rem(11);

@@ -5,4 +5,16 @@
   font-size: rem(36);
   font-weight: 700;
   text-transform: uppercase;
+  //== 992px ==//
+  @media (max-width: $tb) {
+    font-size: rem(32);
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    font-size: rem(28);
+  }
+  //== 440px ==//
+  @media (max-width: $mb-s) {
+    font-size: rem(28);
+  }
 }

@@ -1,7 +1,9 @@
 .faq {
   padding-top: rem(100);
   padding-bottom: rem(20);
-  &__container {
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding-top: rem(60);
   }
 
   &__title {
@@ -15,8 +17,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: rem(2);
-  }
-
-  &__item {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      grid-template-columns: 1fr;
+    }
   }
 }

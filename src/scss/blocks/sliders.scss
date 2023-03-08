@@ -2,18 +2,42 @@
   padding-top: rem(120);
   padding-bottom: rem(95);
   background-color: var(--clr-white);
+  //== 992px ==//
+  @media (max-width: $tb) {
+    padding-top: rem(80);
+    padding-bottom: rem(65);
+  }
+  //== 576px ==//
+  @media (max-width: $mb-m) {
+    padding-top: rem(40);
+    padding-bottom: rem(35);
+  }
 
   &__title:not(:last-child) {
     margin-bottom: rem(50);
+    @media (max-width: $mb) {
+      margin-bottom: rem(30);
+    }
   }
 
   &__body {
     display: flex;
+    @media (max-width: $pc) {
+      max-width: rem(640);
+      flex-direction: column;
+      margin: 0 auto;
+    }
   }
 
   &__video-slider {
     flex: 0 0 rem(480);
     min-width: 0;
+    @media (max-width: $pc) {
+      flex: 1 1 auto;
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+    }
   }
 
   &__photo-slider {
@@ -25,6 +49,9 @@
   &__slide {
     height: rem(335);
     position: relative;
+    &:focus {
+      outline: none;
+    }
   }
   &__slide video {
     position: absolute;
@@ -34,10 +61,20 @@
     left: 0;
     object-fit: cover;
   }
+  //== 370px ==//
+  @media (max-width: $mb-xs) {
+    &__slide {
+      height: auto;
+      padding-bottom: 13%;
+    }
+  }
 }
 
 .photo-slider {
   margin-left: rem(50);
+  @media (max-width: $pc) {
+    margin-left: 0;
+  }
   @extend %fl-r-ct;
   &__body {
     min-width: 0;
@@ -53,17 +90,38 @@
   }
   .slick-slide {
     height: rem(335);
+    &:focus {
+      outline: none;
+    }
   }
   .slick-slide:not(:last-child) {
     margin-right: rem(50);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-right: rem(20);
+    }
   }
   .slick-slide > div:not(:last-child) {
     margin-bottom: rem(25);
+    //== 576px ==//
+    @media (max-width: $mb-m) {
+      margin-bottom: rem(10);
+    }
   }
   &__next {
     transition: opacity 0.5s ease-in-out;
     &.slick-disabled {
       opacity: 0.5;
+    }
+    //== 440px ==//
+    @media (max-width: $mb-s) {
+      flex: 0 0 rem(80);
+      img {
+        display: block;
+        width: rem(80);
+        height: rem(80);
+        object-fit: contain;
+      }
     }
   }
 }
