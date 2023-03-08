@@ -1,5 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
-// import { isMobile } from "./functions.js";
+import { isMobile, removeClasses } from './functions.js';
 // Подключение списка активных модулей
 // import { flsModules } from "./modules.js";
 
@@ -23,6 +23,14 @@ $('.photo-slider__body').slick({
   nextArrow: '.photo-slider__next',
   infinite: false,
   lazyLoad: 'ondemand',
+  responsive: [
+    {
+      breakpoint: 420,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
 
 $('.photo-slider')
@@ -49,3 +57,15 @@ const progressChange = function () {
   progressLine.style.width = `${(scrolled / pageHeight) * 100}%`;
 };
 window.addEventListener('scroll', progressChange);
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (isMobile.any()) {
+    const faqCards = document.querySelectorAll('.faq-card');
+    faqCards.forEach(card => {
+      card.addEventListener('click', () => {
+        removeClasses(faqCards, 'faq-card--active');
+        card.classList.add('faq-card--active');
+      });
+    });
+  }
+});
