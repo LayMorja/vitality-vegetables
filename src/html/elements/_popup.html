@@ -1,0 +1,109 @@
+<div id="modal-form" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/sprite.svg#close-popup" />
+        </svg>
+      </button>
+      <h3 class="popup__title">Получите консультацию</h3>
+      <p class="popup__descr">
+        С вами свяжется специалист в течение 5 минут и ответит на все вопросы!
+      </p>
+      <form action="#" class="popup__form form">
+        <div class="form__row">
+          <input
+            autocomplete="off"
+            type="text"
+            name="Имя"
+            placeholder="Ваше имя"
+            class="form__input input" />
+        </div>
+        <div class="form__row">
+          <input
+            autocomplete="off"
+            type="mail"
+            name="E-mail адрес"
+            placeholder="E-mail"
+            class="form__input input" />
+        </div>
+        <div class="form__row">
+          <input
+            autocomplete="off"
+            type="tel"
+            name="form[]"
+            placeholder="+7 (900) 999-99-99"
+            class="form__input input" />
+        </div>
+        <div class="form__options options">
+          <h4 class="options__title">Как с вами связаться?</h4>
+          <div class="options__item">
+            <input
+              hidden
+              id="o_1"
+              class="options__input"
+              checked
+              type="radio"
+              value="Телефон"
+              name="Вид связи" />
+            <label for="o_1" class="options__label">
+              <span class="options__text">Звонок по телефону</span>
+            </label>
+          </div>
+          <div class="options__item">
+            <input
+              hidden
+              id="o_2"
+              class="options__input"
+              type="radio"
+              value="Почта"
+              name="Вид связи" />
+            <label for="o_2" class="options__label">
+              <span class="options__text">Письмо на почту</span>
+            </label>
+          </div>
+          <div class="options__item">
+            <input
+              hidden
+              id="o_3"
+              class="options__input"
+              type="radio"
+              value="WhatsApp"
+              name="Вид связи" />
+            <label for="o_3" class="options__label">
+              <span class="options__text">WhatsApp</span>
+            </label>
+          </div>
+          <div class="options__item">
+            <input
+              hidden
+              id="o_4"
+              class="options__input"
+              type="radio"
+              value="Telegram"
+              name="Вид связи" />
+            <label for="o_4" class="options__label">
+              <span class="options__text">Telegram</span>
+            </label>
+          </div>
+        </div>
+        <div class="form__checkbox checkbox">
+          <input
+            id="c_1"
+            class="checkbox__input"
+            type="checkbox"
+            checked
+            value="Согласен"
+            name="Соглашение с ПК" />
+          <label for="c_1" class="checkbox__label">
+            <span class="checkbox__text">Я согласен с политикой конфиденциальности</span>
+          </label>
+        </div>
+        <button class="form__button button _fw">
+          <span>Получить консультацию</span>
+        </button>
+        <p class="popup__underword">Это совершенно бесплатно.</p>
+      </form>
+    </div>
+  </div>
+</div>

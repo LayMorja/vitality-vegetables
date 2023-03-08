@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Главная страница</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    @@include("./html/_meta.html",{ "description":"", "keywords":"" })
+    @@include("./html/_styles-vendors.html",{})
+    <link rel="shortcut icon" href="@resources/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Progress bar -->
+      @@include("./html/elements/_progress-bar.html", {})
+      <!-- Top bar -->
+      @@include("./html/elements/_top-bar.html", {})
+      <!-- Header -->
+      @@include("./html/_header.html",{})
+      <main class="page">
+        <!-- Hero section -->
+        @@include("./html/blocks/_hero.html", {})
+        <!-- Products section -->
+        @@include("./html/blocks/_products.html", {})
+        <!-- Cleaning seciton -->
+        @@include("./html/blocks/_cleaning.html", {})
+        <!-- Sliders section -->
+        @@include("./html/blocks/_sliders.html", {})
+        <!-- Order section -->
+        @@include("./html/blocks/_order.html", {})
+        <!-- FAQ section -->
+        @@include("./html/blocks/_faq.html", {})
+        <!-- Callback section -->
+        @@include("./html/blocks/_callback.html", {})
+      </main>
+      <!-- Footer -->
+      @@include("./html/_footer.html",{})
+    </div>
+    <!-- Modal windows -->
+    @@include("./html/elements/_popup.html", {})
+    <!-- Script's connection -->
+    @@include("./html/_js-vendors.html",{})
+  </body>
+</html>

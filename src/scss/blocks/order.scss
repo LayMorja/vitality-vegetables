@@ -1,0 +1,63 @@
+.order {
+  padding: rem(70) 0 rem(60);
+  @extend %bg-cov;
+  background-position: center 20%;
+
+  &__container {
+    position: relative;
+    color: var(--clr-white);
+  }
+  &__container::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: rem(-30);
+    width: rem(544);
+    height: rem(337);
+    @extend %bg-con;
+    background-image: url('@temp/order/image.png');
+  }
+
+  &__title:not(:last-child) {
+    margin-bottom: rem(35);
+  }
+
+  &__text {
+    max-width: rem(830);
+    font-size: rem(18);
+  }
+  &__text:not(:last-child) {
+    margin-bottom: rem(85);
+  }
+  &__text p:not(:last-child) {
+    margin-bottom: rem(15);
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__benefits {
+  }
+
+  &__benefit {
+    max-width: rem(470);
+    @extend %fl-r-ct;
+  }
+  &__benefit:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+  &__benefit div {
+    text-align: center;
+    flex: 0 0 rem(97);
+    &:not(:last-child) {
+      margin-right: rem(15);
+    }
+  }
+  &__benefit img {
+    display: block;
+  }
+  &__benefit span {
+    font-size: rem(27);
+  }
+}

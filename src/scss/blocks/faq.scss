@@ -1,0 +1,22 @@
+.faq {
+  padding-top: rem(100);
+  padding-bottom: rem(20);
+  &__container {
+  }
+
+  &__title {
+    text-align: center;
+  }
+  &__title:not(:last-child) {
+    margin-bottom: rem(35);
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(2);
+  }
+
+  &__item {
+  }
+}

@@ -1,0 +1,7 @@
+/node_modules
+/dist
+package-lock.json
+*.tgz
+*.rar
+*.zip
+config/version.json

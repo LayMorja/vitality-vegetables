@@ -1,0 +1,107 @@
+.top-bar {
+  padding: rem(10) 0;
+  background-color: var(--clr-green);
+  &__container {
+    @extend %fl-r-ct;
+    max-width: rem(1066);
+    justify-content: flex-end;
+  }
+
+  &__socail-list {
+    @extend %fl-r-ct;
+  }
+  &__socail-list:not(:last-child) {
+    margin-right: rem(30);
+  }
+
+  &__social-item {
+    flex: 0 0 rem(30);
+  }
+  &__social-item:not(:last-child) {
+    margin-right: rem(13);
+  }
+
+  &__social-link {
+    @extend %fl-a-ct;
+    width: rem(30);
+    height: rem(30);
+    border-radius: 40%;
+    background-color: var(--clr-white);
+    @media (any-hover: hover) {
+      &:hover svg {
+        transform: scale(1.05);
+      }
+    }
+  }
+  &__social-link svg {
+    display: block;
+    width: rem(20);
+    height: rem(20);
+    object-fit: contain;
+    transition: transform 0.32s ease-in-out;
+  }
+
+  &__phone {
+    display: block;
+    font-size: rem(24);
+    line-height: 1;
+    font-weight: 700;
+    color: var(--clr-white);
+    transition: border-color 0.32s ease-in-out;
+    border-bottom: rem(2) solid transparent;
+    transform: translateY(rem(2));
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: inherit;
+      }
+    }
+  }
+  &__phone:not(:last-child) {
+    margin-right: rem(30);
+  }
+
+  &__button {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: rem(3) rem(35);
+    border-radius: rem(10);
+    background-color: var(--clr-white);
+    transition: background-color 0.32s ease-in-out;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: rem(30);
+      transform: rotate(-45deg);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.3));
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          animation: slideRight 1s ease-in-out forwards;
+        }
+        background-color: var(--clr-black);
+        span {
+          color: var(--clr-white);
+        }
+      }
+    }
+  }
+  &__button span {
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.32s ease-in-out;
+  }
+}
+
+@keyframes slideRight {
+  to {
+    transform: translateX(200%) rotate(-45deg);
+  }
+}

@@ -1,0 +1,43 @@
+.products {
+  position: relative;
+  padding-top: rem(50);
+  padding-bottom: rem(95);
+  background-color: #eef5ed;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(340);
+    height: rem(520);
+    @extend %bg-con;
+  }
+  &::before {
+    bottom: rem(-80);
+    left: 0;
+    background-image: url('@img/products/leaf-right.png');
+  }
+  &::after {
+    top: rem(-80);
+    right: 0;
+    background-image: url('@img/products/leaf-left.png');
+  }
+  &__container {
+  }
+
+  &__title {
+    text-align: center;
+  }
+  &__title:not(:last-child) {
+    margin-bottom: rem(50);
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(15);
+    row-gap: rem(50);
+  }
+
+  &__item {
+  }
+}
