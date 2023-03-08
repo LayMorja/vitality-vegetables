@@ -19,39 +19,41 @@
     }
   }
 
-  &__content {
-    position: relative;
-    padding: rem(35) rem(55) rem(105);
-    background-color: rgba(255, 193, 131, 0.49);
-    &::after {
-      content: '';
-      position: absolute;
-      top: rem(35);
-      right: rem(55);
-      width: rem(432);
-      height: rem(340);
-      @extend %bg-con;
-      background-image: url('@temp/hero/image.png');
-      @media (max-width: $pc) {
-        top: rem(25);
-        right: rem(0);
-        height: rem(300);
-        opacity: 0.8;
-      }
-      //== 992px ==//
-      @media (max-width: $tb) {
-        top: auto;
-        bottom: rem(60);
-        right: rem(-30);
-        height: rem(220);
-      }
-      //== 768px ==//
-      @media (max-width: $mb) {
-        display: none;
+  &__image {
+    @extend %ibg;
+    flex: 0 1 rem(432);
+    padding-bottom: percent(340, 1176);
+    //== 768px ==//
+    @media (max-width: $mb) {
+      display: none;
+    }
+  }
+
+  &__body {
+    padding-bottom: rem(30);
+    &:not(:last-child) {
+      margin-right: rem(40);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-bottom: 0;
+      &:not(:last-child) {
+        margin-right: 0;
       }
     }
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    padding: rem(35) rem(55);
+    background-color: rgba(255, 193, 131, 0.49);
     @media (max-width: $pc) {
-      padding: rem(25) rem(40) rem(85);
+      padding: rem(30) rem(40);
+    }
+    //== 768px ==//
+    @media (max-width: $mb) {
+      padding-bottom: rem(85);
     }
     //== 440px ==//
     @media (max-width: $mb-s) {
